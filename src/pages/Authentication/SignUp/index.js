@@ -20,9 +20,9 @@ import IllustrationLayout from 'pages/Authentication/components/IllustrationLayo
 import bgImage from 'assets/images/illustrations/signin.jpg';
 
 function SignUp() {
-  const [rememberMe, setRememberMe] = useState(false);
+  const [isWalker, setIsWalker] = useState(false);
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const handleSetIsWalker = () => setIsWalker(!isWalker);
 
   return (
     <IllustrationLayout
@@ -38,15 +38,15 @@ function SignUp() {
           <MKInput type="password" label="Contraseña" fullWidth />
         </MKBox>
         <MKBox display="flex" alignItems="center" ml={-1}>
-          <Switch checked={rememberMe} onChange={handleSetRememberMe} />
+          <Switch checked={isWalker} onChange={handleSetIsWalker} />
           <MKTypography
             variant="button"
             fontWeight="regular"
             color="text"
-            onClick={handleSetRememberMe}
+            onClick={handleSetIsWalker}
             sx={{ cursor: 'pointer', userSelect: 'none', ml: -1 }}
           >
-            Soy paseador ({rememberMe ? 'Sí' : 'No'})
+            Soy paseador ({isWalker ? 'Sí' : 'No'})
           </MKTypography>
         </MKBox>
         <MKBox mt={4} mb={1}>
@@ -59,7 +59,7 @@ function SignUp() {
             Ya tiene una cuenta?{' '}
             <MKTypography
               component={Link}
-              to="/registro"
+              to="/unirme"
               variant="button"
               color="success"
               fontWeight="medium"

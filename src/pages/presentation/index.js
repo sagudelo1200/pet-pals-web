@@ -45,7 +45,7 @@ function Presentation() {
         routes={routes}
         action={{
           type: 'internal',
-          route: '/registro',
+          route: '/unirme',
           label: 'Unirme',
           color: 'warning',
         }}
@@ -91,7 +91,7 @@ function Presentation() {
             </MKTypography>
 
             <MKBox mt={6}>
-              <MKButton component="a" href="/" color="white" variant="outlined">
+              <MKButton component="a" href="/unirme" color="white" variant="outlined">
                 Quiero ser de los primeros
               </MKButton>
             </MKBox>

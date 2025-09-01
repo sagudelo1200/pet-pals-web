@@ -43,7 +43,7 @@ function IllustrationLayout({
           routes={routes}
           /* action={{
             type: 'internal',
-            route: '/registro',
+            route: '/unirme',
             label: 'Unirme',
             color: 'warning',
           }} */
