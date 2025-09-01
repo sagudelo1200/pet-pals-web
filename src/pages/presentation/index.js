@@ -43,12 +43,12 @@ function Presentation() {
     <>
       <DefaultNavbar
         routes={routes}
-        /* action={{
-          type: 'external',
-          route: 'https://www.creative-tim.com/product/material-kit-pro-react',
-          label: 'Solicitar paseo',
+        action={{
+          type: 'internal',
+          route: '/registro',
+          label: 'Unirme',
           color: 'warning',
-        }} */
+        }}
         sticky
       />
       <MKBox
