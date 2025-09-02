@@ -44,7 +44,7 @@ import DefaultNavbarMobile from 'examples/Navbars/DefaultNavbar/DefaultNavbarMob
 import breakpoints from 'assets/theme/base/breakpoints';
 
 function DefaultNavbar({
-  brand = 'Pet Pals',
+  brand = 'Material Kit 2',
   routes,
   transparent = false,
   light = false,

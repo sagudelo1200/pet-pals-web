@@ -20,7 +20,6 @@ import Card from '@mui/material/Card';
 
 // Material Kit 2 PRO React components
 import MKBox from 'components/MKBox';
-import MKBadge from 'components/MKBadge';
 import MKTypography from 'components/MKTypography';
 import MKButton from 'components/MKButton';
 
@@ -76,23 +75,21 @@ function Presentation() {
               })}
               textAlign="center"
             >
-              Muy Pronto en Medellín{' '}
-              <MKBadge
-                badgeContent="Pet Pals"
-                size="lg"
-                variant="contained"
-                color="white"
-                container
-                sx={{ mt: -4 }}
-              />
+              Cuidamos a tu mascota como si fuera nuestra 🐾
             </MKTypography>
             <MKTypography variant="body1" color="white" textAlign="center" px={6} mt={1}>
-              La tranquilidad de saber que tu mascota siempre estará en buenas manos.
+              Conecta con paseadores verificados y encuentra la tranquilidad de que tu mejor amigo
+              siempre estará en buenas manos.
             </MKTypography>
 
-            <MKBox mt={6}>
+            <MKBox mt={6} mx={1}>
               <MKButton component="a" href="/unirme" color="white" variant="outlined">
-                Quiero ser de los primeros
+                Unirme ahora
+              </MKButton>
+            </MKBox>
+            <MKBox mt={6} mx={1}>
+              <MKButton component="a" href="/unirme" color="success" variant="outlined">
+                Soy paseador
               </MKButton>
             </MKBox>
           </Grid>

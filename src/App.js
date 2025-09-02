@@ -26,6 +26,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from 'assets/theme';
 import Presentation from 'layouts/pages/presentation';
 import SignUp from 'pages/Authentication/SignUp';
+import Coworking from 'pages/LandingPages/Coworking';
 
 // Material Kit 2 PRO React routes
 import routes from 'routes';
@@ -59,6 +60,7 @@ export default function App() {
         {getRoutes(routes)}
         <Route path="/presentation" element={<Presentation />} />
         <Route path="/unirme" element={<SignUp />} />
+        <Route path="/coworking" element={<Coworking />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
     </ThemeProvider>
