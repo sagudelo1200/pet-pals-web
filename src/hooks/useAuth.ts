@@ -9,16 +9,28 @@ import {
   sendPasswordResetEmail,
   GoogleAuthProvider,
   signInWithPopup,
+  User as FirebaseUser,
 } from 'firebase/auth';
 
 /**
  * Hook para manejar autenticación con Firebase Auth.
  * Provee usuario, loading, error y funciones de login, logout, registro, etc.
  */
-export default function useAuth() {
-  const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+export interface UseAuthResult {
+  user: FirebaseUser | null;
+  loading: boolean;
+  error: any;
+  login: (email: string, password: string) => Promise<void>;
+  register: (email: string, password: string, displayName?: string) => Promise<void>;
+  logout: () => Promise<void>;
+  loginWithGoogle: () => Promise<void>;
+  resetPassword: (email: string) => Promise<void>;
+}
+
+export default function useAuth(): UseAuthResult {
+  const [user, setUser] = useState<FirebaseUser | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<any>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(
@@ -36,7 +48,7 @@ export default function useAuth() {
   }, []);
 
   // Login con email y password
-  const login = useCallback(async (email, password) => {
+  const login = useCallback(async (email: string, password: string) => {
     setLoading(true);
     setError(null);
     try {
@@ -50,7 +62,7 @@ export default function useAuth() {
   }, []);
 
   // Registro con email y password
-  const register = useCallback(async (email, password, displayName) => {
+  const register = useCallback(async (email: string, password: string, displayName?: string) => {
     setLoading(true);
     setError(null);
     try {
@@ -96,7 +108,7 @@ export default function useAuth() {
   }, []);
 
   // Reset de contraseña
-  const resetPassword = useCallback(async (email) => {
+  const resetPassword = useCallback(async (email: string) => {
     setLoading(true);
     setError(null);
     try {
