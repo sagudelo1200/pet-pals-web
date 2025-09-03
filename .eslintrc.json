@@ -3,15 +3,22 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": 12,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -20,7 +27,8 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+  "no-undef": "off",
     "react/jsx-props-no-spreading": [
       1,
       {

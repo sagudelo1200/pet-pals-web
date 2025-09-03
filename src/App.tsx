@@ -12,6 +12,9 @@ import Coworking from 'pages/LandingPages/Coworking';
 // Material Kit 2 PRO React routes
 import routes from 'routes';
 
+// Custom pages
+import BaseCreator from 'pages/BaseCreator';
+
 const App: React.FC = () => {
   const { pathname } = useLocation();
 
@@ -40,6 +43,7 @@ const App: React.FC = () => {
         <Route path="/presentation" element={<Presentation />} />
         <Route path="/unirme" element={<SignUp />} />
         <Route path="/coworking" element={<Coworking />} />
+        <Route path="/base-creator" element={<BaseCreator />} />
         <Route path="*" element={<Navigate to="/presentation" />} />
       </Routes>
     </ThemeProvider>
