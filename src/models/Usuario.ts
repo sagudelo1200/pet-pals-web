@@ -1,3 +1,19 @@
+export interface Direccion {
+  calle?: string;
+  numero?: string;
+  barrio?: string; // barrio de Medellín
+  comuna?: string; // comuna de Medellín
+  ciudad?: string;
+  departamento?: string;
+  pais?: string;
+  codigo_postal?: string;
+  coordenadas?: {
+    lat: number;
+    lng: number;
+  };
+  referencia?: string; // punto de referencia o indicaciones
+  descripcion?: string; // campo libre para detalles adicionales
+}
 import { BaseModel } from "./BaseModel";
 
 export type RolUsuario = 'dueño' | 'paseador' | 'admin';
@@ -18,7 +34,7 @@ export interface Usuario extends BaseModel {
 
   // Datos generales
   fecha_nacimiento?: Date;
-  direccion?: string;
+  direccion?: Direccion;
   zona?: string;
 
   // Roles y verificación
