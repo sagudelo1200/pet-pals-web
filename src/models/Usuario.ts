@@ -45,7 +45,4 @@ export interface Usuario extends BaseModel {
   // Estado y control
   fecha_registro: Date;
   estado: EstadoUsuario;
-
-  // Preferencias
-  preferencias?: string;
 }

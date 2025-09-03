@@ -21,7 +21,7 @@ export interface Mascota extends BaseModel {
   raza?: string;
   fecha_nacimiento?: Date;
   genero?: GeneroMascota;
-  tamaño?: TamanoMascota;
+  tamano?: TamanoMascota;
   peso?: number;
 
   // Salud y cuidado
