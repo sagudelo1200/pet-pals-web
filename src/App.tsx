@@ -24,7 +24,9 @@ const App: React.FC = () => {
     document.scrollingElement!.scrollTop = 0;
   }, [pathname]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getRoutes = (allRoutes: any[]): React.ReactNode =>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     allRoutes.map((route: any) => {
       if (route.collapse) {
         return getRoutes(route.collapse);

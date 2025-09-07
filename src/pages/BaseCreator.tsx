@@ -1,12 +1,6 @@
 import React from 'react';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../firebase/config';
-import { Usuario } from '../models/Usuario';
-import { Mascota } from '../models/Mascota';
-import { PerfilPublico } from '../models/PerfilPublico';
-import { Paseo } from '../models/Paseo';
-import { PaseoMascota } from '../models/PaseoMascota';
-import { Valoracion } from '../models/Valoracion';
 
 const modelos = [
   {
