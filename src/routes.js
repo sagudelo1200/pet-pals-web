@@ -40,6 +40,7 @@ Coded by www.creative-tim.com
 import Icon from '@mui/material/Icon';
 
 // Pages
+import Dashboard from './pages/Dashboard';
 /* import CoworkingPage from 'layouts/pages/landing-pages/coworking';
 import Rental from 'layouts/pages/landing-pages/rental';
 import AboutUs from 'layouts/pages/company/about-us';
@@ -99,6 +100,12 @@ import Toggles from 'layouts/sections/elements/toggles';
 import Typography from 'layouts/sections/elements/typography'; */
 
 const routes = [
+  {
+    name: 'dashboard',
+    icon: <Icon>dashboard</Icon>,
+    route: '/dashboard',
+    component: <Dashboard />,
+  },
   {
     name: 'servicios',
     icon: <Icon>volunteer_activism</Icon>,

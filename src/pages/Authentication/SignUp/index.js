@@ -34,9 +34,9 @@ function SignUp() {
     errorMsg,
   } = useSignUpLogic();
 
-  // Si el usuario está autenticado, redirigir a la página principal
+  // Si el usuario está autenticado, redirigir al dashboard
   if (user) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/dashboard" replace />;
   }
 
   return (

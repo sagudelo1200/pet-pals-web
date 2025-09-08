@@ -19,6 +19,7 @@ import {
 export interface UseAuthResult {
   user: FirebaseUser | null;
   loading: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   error: any;
   login: (email: string, password: string) => Promise<void>;
   register: (email: string, password: string, displayName?: string) => Promise<void>;
