@@ -22,6 +22,7 @@ import Card from '@mui/material/Card';
 import MKBox from 'components/MKBox';
 import MKTypography from 'components/MKTypography';
 import MKButton from 'components/MKButton';
+import MKBadge from 'components/MKBadge';
 
 // Material Kit 2 PRO React examples
 import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
@@ -75,15 +76,23 @@ function Presentation() {
               })}
               textAlign="center"
             >
-              Cuidamos a tu mascota como si fuera nuestra 🐾
+              Pet Pals{' '}
+              <MKBadge
+                badgeContent="pro"
+                size="lg"
+                variant="contained"
+                color="white"
+                container
+                sx={{ mt: -4 }}
+              />
             </MKTypography>
+
             <MKTypography variant="body1" color="white" textAlign="center" px={6} mt={1}>
-              Conecta con paseadores verificados y encuentra la tranquilidad de que tu mejor amigo
-              siempre estará en buenas manos.
+              Porque tu perro no debería esperar a que tengas tiempo.
             </MKTypography>
 
             <MKBox mt={6} mx={1}>
-              <MKButton component="a" href="/unirme" color="white" variant="outlined">
+              <MKButton component="a" href="/unirme" color="warning" variant="contained">
                 Unirme ahora
               </MKButton>
             </MKBox>

@@ -37,7 +37,7 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from '@mui/material/Icon';
+// import Icon from '@mui/material/Icon';
 
 // Pages
 /* import CoworkingPage from 'layouts/pages/landing-pages/coworking';
@@ -99,13 +99,14 @@ import Toggles from 'layouts/sections/elements/toggles';
 import Typography from 'layouts/sections/elements/typography'; */
 
 const routes = [
-  {
+  {},
+  /*   {
     name: 'servicios',
     icon: <Icon>volunteer_activism</Icon>,
     columns: 3,
     rowsPerColumn: 2,
     collapse: [
-      /* {
+      {
         name: 'landing pages',
         collapse: [
           {
@@ -194,9 +195,9 @@ const routes = [
             component: <VirtualRealityPage />,
           },
         ],
-      }, */
+      },
     ],
-  },
+  }, */
   /*   {
     name: 'pages',
     icon: <Icon>dashboard</Icon>,
