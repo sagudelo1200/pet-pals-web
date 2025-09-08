@@ -29,7 +29,7 @@ import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
 import DefaultFooter from 'examples/Footers/DefaultFooter';
 
 // Presentation page sections
-import Counters from 'pages/presentation/sections/Counters';
+import Counters from 'pages/landing/sections/Counters';
 
 // Routes
 import routes from 'routes';

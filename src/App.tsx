@@ -6,7 +6,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 // Material Kit 2 PRO React themes
 import theme from 'assets/theme';
-import Presentation from 'layouts/pages/presentation';
+import Landing from 'layouts/pages/landing';
 import SignUp from 'pages/Authentication/SignUp';
 // Material Kit 2 PRO React routes
 import routes from 'routes';
@@ -26,12 +26,14 @@ const App: React.FC = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const getRoutes = (allRoutes: any[]): React.ReactNode =>
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    allRoutes.map((route: any) => {
+    allRoutes.map((route: any, idx: number) => {
       if (route.collapse) {
         return getRoutes(route.collapse);
       }
       if (route.route) {
-        return <Route path={route.route} element={route.component} key={route.key} />;
+        // Usa route.key si existe, si no usa route.route, si no usa el índice
+        const key = route.key || route.route || idx;
+        return <Route path={route.route} element={route.component} key={key} />;
       }
       return null;
     });
@@ -41,7 +43,7 @@ const App: React.FC = () => {
       <CssBaseline />
       <Routes>
         {getRoutes(routes)}
-        <Route path="/" element={<Presentation />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/unirme" element={<SignUp />} />
         <Route path="/base-creator" element={<BaseCreator />} />
         <Route path="*" element={<Navigate to="/" />} />

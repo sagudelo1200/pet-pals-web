@@ -39,12 +39,12 @@ function DefaultFooter({ content }) {
               <Link to={brand.route}>
                 <MKBox component="img" src={brand.image} alt={brand.name} maxWidth="2rem" mb={2} />
               </Link>
-              <MKTypography variant="h6">{brand.name}</MKTypography>
+              <MKTypography variant="h6">{brand.name || ''}</MKTypography>
             </MKBox>
             <MKBox display="flex" alignItems="center" mt={3}>
               {socials.map(({ icon, link }, key) => (
                 <MKTypography
-                  key={link}
+                  key={`${link}-${key}`}
                   component="a"
                   href={link}
                   target="_blank"
@@ -59,8 +59,8 @@ function DefaultFooter({ content }) {
               ))}
             </MKBox>
           </Grid>
-          {menus.map(({ name: title, items }) => (
-            <Grid key={title} item xs={6} md={2} sx={{ mb: 3 }}>
+          {menus.map(({ name: title, items }, key) => (
+            <Grid key={`${title}-${key}`} item xs={6} md={2} sx={{ mb: 3 }}>
               <MKTypography
                 display="block"
                 variant="button"
@@ -68,11 +68,17 @@ function DefaultFooter({ content }) {
                 textTransform="capitalize"
                 mb={1}
               >
-                {title}
+                {title || ''}
               </MKTypography>
               <MKBox component="ul" p={0} m={0} sx={{ listStyle: 'none' }}>
-                {items.map(({ name, route, href }) => (
-                  <MKBox key={name} component="li" p={0} m={0} lineHeight={1.25}>
+                {items.map(({ name, route, href }, idx) => (
+                  <MKBox
+                    key={`${name}-${route || href || idx}`}
+                    component="li"
+                    p={0}
+                    m={0}
+                    lineHeight={1.25}
+                  >
                     {href ? (
                       <MKTypography
                         component="a"
@@ -83,7 +89,7 @@ function DefaultFooter({ content }) {
                         fontWeight="regular"
                         textTransform="capitalize"
                       >
-                        {name}
+                        {name || ''}
                       </MKTypography>
                     ) : (
                       <MKTypography
@@ -93,7 +99,7 @@ function DefaultFooter({ content }) {
                         fontWeight="regular"
                         textTransform="capitalize"
                       >
-                        {name}
+                        {name || ''}
                       </MKTypography>
                     )}
                   </MKBox>

@@ -37,7 +37,7 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-// import Icon from '@mui/material/Icon';
+import Icon from '@mui/material/Icon';
 
 // Pages
 /* import CoworkingPage from 'layouts/pages/landing-pages/coworking';
@@ -99,105 +99,13 @@ import Toggles from 'layouts/sections/elements/toggles';
 import Typography from 'layouts/sections/elements/typography'; */
 
 const routes = [
-  {},
-  /*   {
+  {
     name: 'servicios',
     icon: <Icon>volunteer_activism</Icon>,
     columns: 3,
     rowsPerColumn: 2,
-    collapse: [
-      {
-        name: 'landing pages',
-        collapse: [
-          {
-            name: 'coworking',
-            route: '/pages/landing-pages/coworking',
-            component: <CoworkingPage />,
-          },
-          {
-            name: 'rental',
-            route: '/pages/landing-pages/rental',
-            component: <Rental />,
-          },
-        ],
-      },
-      {
-        name: 'company',
-        collapse: [
-          {
-            name: 'about us',
-            route: '/pages/company/about-us',
-            component: <AboutUs />,
-          },
-          {
-            name: 'pricing',
-            route: '/pages/company/pricing',
-            component: <Pricing />,
-          },
-        ],
-      },
-      {
-        name: 'support',
-        collapse: [
-          {
-            name: 'help center',
-            route: '/pages/support/help-center',
-            component: <HelpCenter />,
-          },
-          {
-            name: 'contact us',
-            route: '/pages/support/contact-us',
-            component: <ContactUs />,
-          },
-          {
-            name: 'faq',
-            route: '/pages/support/faq',
-            component: <Faq />,
-          },
-          {
-            name: 'privacy',
-            route: '/pages/support/privacy',
-            component: <Privacy />,
-          },
-        ],
-      },
-      {
-        name: 'apps',
-        collapse: [
-          {
-            name: 'desktop app',
-            route: '/pages/apps/desktop-app',
-            component: <DesktopApp />,
-          },
-        ],
-      },
-      {
-        name: 'blogs',
-        collapse: [
-          {
-            name: 'single article',
-            route: '/pages/blogs/single-article',
-            component: <SingleArticle />,
-          },
-          {
-            name: 'author',
-            route: '/pages/blogs/author',
-            component: <Author />,
-          },
-        ],
-      },
-      {
-        name: 'extra',
-        collapse: [
-          {
-            name: 'virtual reality',
-            route: '/pages/extra/virtual-reality',
-            component: <VirtualRealityPage />,
-          },
-        ],
-      },
-    ],
-  }, */
+    collapse: [],
+  },
   /*   {
     name: 'pages',
     icon: <Icon>dashboard</Icon>,

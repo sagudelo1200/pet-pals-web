@@ -31,7 +31,7 @@ const MKBadge = forwardRef(
       indicator = false,
       border = false,
       container = false,
-      children,
+      children = '',
       ...rest
     },
     ref
