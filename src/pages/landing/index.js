@@ -97,7 +97,7 @@ function Presentation() {
               </MKButton>
             </MKBox>
             <MKBox mt={6} mx={1}>
-              <MKButton component="a" href="/unirme" color="success" variant="outlined">
+              <MKButton component="a" href="/unirme?walker=true" color="success" variant="outlined">
                 Soy paseador
               </MKButton>
             </MKBox>

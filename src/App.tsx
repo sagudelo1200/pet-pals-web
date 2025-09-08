@@ -8,11 +8,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import theme from 'assets/theme';
 import Landing from 'layouts/pages/landing';
 import SignUp from 'pages/Authentication/SignUp';
+import { AuthProvider } from 'contexts/AuthContext';
 // Material Kit 2 PRO React routes
 import routes from 'routes';
 
 // Custom pages
 import BaseCreator from 'pages/BaseCreator';
+import Logout from 'pages/Logout';
 
 const App: React.FC = () => {
   const { pathname } = useLocation();
@@ -39,16 +41,19 @@ const App: React.FC = () => {
     });
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="/" element={<Landing />} />
-        <Route path="/unirme" element={<SignUp />} />
-        <Route path="/base-creator" element={<BaseCreator />} />
-        <Route path="*" element={<Navigate to="/" />} />
-      </Routes>
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Routes>
+          {getRoutes(routes)}
+          <Route path="/" element={<Landing />} />
+          <Route path="/unirme" element={<SignUp />} />
+          <Route path="/base-creator" element={<BaseCreator />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </ThemeProvider>
+    </AuthProvider>
   );
 };
 

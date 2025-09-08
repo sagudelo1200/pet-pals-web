@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useSignUpLogic } from './useSignUpLogic';
+import { Navigate } from 'react-router-dom';
 
 // react-router-dom components
 import { Link } from 'react-router-dom';
 
 // @mui material components
 import Switch from '@mui/material/Switch';
-import Icon from '@mui/material/Icon';
 
 // Material Kit 2 PRO React components
 import MKBox from 'components/MKBox';
@@ -20,9 +20,24 @@ import IllustrationLayout from 'pages/Authentication/components/IllustrationLayo
 import bgImage from 'assets/images/illustrations/signin.jpg';
 
 function SignUp() {
-  const [isWalker, setIsWalker] = useState(false);
+  const {
+    isWalker,
+    handleSetIsWalker,
+    email,
+    setEmail,
+    password,
+    setPassword,
+    loginWithGoogle,
+    loading,
+    user,
+    handleLoginOrRegister,
+    errorMsg,
+  } = useSignUpLogic();
 
-  const handleSetIsWalker = () => setIsWalker(!isWalker);
+  // Si el usuario está autenticado, redirigir a la página principal
+  if (user) {
+    return <Navigate to="/" replace />;
+  }
 
   return (
     <IllustrationLayout
@@ -30,13 +45,39 @@ function SignUp() {
       description="Ya seas dueño de mascota o paseador, aquí encontrarás la comunidad perfecta para ti."
       illustration={bgImage}
     >
-      <MKBox component="form" role="form">
+      <MKBox
+        component="form"
+        role="form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleLoginOrRegister();
+        }}
+      >
         <MKBox mb={2}>
-          <MKInput type="email" label="Correo" fullWidth />
+          <MKInput
+            type="email"
+            label="Correo"
+            fullWidth
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </MKBox>
         <MKBox mb={2}>
-          <MKInput type="password" label="Contraseña" fullWidth />
+          <MKInput
+            type="password"
+            label="Contraseña"
+            fullWidth
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </MKBox>
+        {errorMsg && (
+          <MKBox mb={2}>
+            <MKTypography color="error" variant="caption">
+              {errorMsg}
+            </MKTypography>
+          </MKBox>
+        )}
         <MKBox display="flex" alignItems="center" ml={-1}>
           <Switch checked={isWalker} onChange={handleSetIsWalker} />
           <MKTypography
@@ -50,8 +91,27 @@ function SignUp() {
           </MKTypography>
         </MKBox>
         <MKBox mt={4} mb={1}>
-          <MKButton variant="gradient" color="warning" size="large" fullWidth>
-            <Icon ml={4}>pets</Icon> Comenzar ahora
+          <MKButton
+            variant="gradient"
+            color="success"
+            size="large"
+            fullWidth
+            type="submit"
+            disabled={loading}
+          >
+            Comenzar ahora
+          </MKButton>
+        </MKBox>
+        <MKBox mt={1} mb={1}>
+          <MKButton
+            variant="gradient"
+            color="warning"
+            size="large"
+            fullWidth
+            onClick={loginWithGoogle}
+            disabled={loading}
+          >
+            Unirme con Google
           </MKButton>
         </MKBox>
         <MKBox mt={3} textAlign="center">

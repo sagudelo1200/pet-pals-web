@@ -15,6 +15,7 @@ Coded by www.creative-tim.com
 */
 
 import { Fragment, useState, useEffect } from 'react';
+import { useAuthContext } from 'contexts/AuthContext';
 
 // react-router components
 import { Link } from 'react-router-dom';
@@ -62,6 +63,7 @@ function DefaultNavbar({
   const [arrowRef, setArrowRef] = useState(null);
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
+  const { user } = useAuthContext ? useAuthContext() : { user: null };
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
 
@@ -498,7 +500,9 @@ function DefaultNavbar({
             {renderNavbarItems}
           </MKBox>
           <MKBox ml={{ xs: 'auto', lg: 0 }}>
-            {action &&
+            {/* Mostrar UNIRME solo si el usuario NO está autenticado */}
+            {!user &&
+              action &&
               (action.type === 'internal' ? (
                 <MKButton
                   component={Link}
@@ -530,6 +534,19 @@ function DefaultNavbar({
                   {action.label}
                 </MKButton>
               ))}
+            {/* El botón Salir solo se muestra si el usuario está autenticado */}
+            {user && (
+              <MKButton
+                component={Link}
+                to="/logout"
+                variant="contained"
+                color="secondary"
+                size="small"
+                sx={{ ml: 1 }}
+              >
+                Salir
+              </MKButton>
+            )}
           </MKBox>
           <MKBox
             display={{ xs: 'inline-block', lg: 'none' }}
