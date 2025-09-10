@@ -14,7 +14,7 @@ export interface Direccion {
   referencia?: string; // punto de referencia o indicaciones
   descripcion?: string; // campo libre para detalles adicionales
 }
-import { BaseModel } from "./BaseModel";
+import { BaseModel } from './BaseModel';
 
 export type RolUsuario = 'dueño' | 'paseador' | 'admin';
 export type EstadoUsuario = 'activo' | 'inactivo' | 'baneado';

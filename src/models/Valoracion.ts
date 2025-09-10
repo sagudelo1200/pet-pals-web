@@ -1,13 +1,21 @@
-import { BaseModel } from "./BaseModel";
+import { BaseModel } from './BaseModel';
 
+/**
+ * Representa una valoración de un servicio de paseo.
+ * Incluye calificación numérica, comentario opcional y referencia a paseo y usuarios.
+ */
 export interface Valoracion extends BaseModel {
-  // Identificación
+  /** ID del paseo valorado. */
   id_paseo: string;
-  id_usuario: string; // usuario que califica
-  id_paseador: string; // paseador calificado
+  /** ID del usuario que realiza la valoración. */
+  id_usuario: string;
+  /** ID del paseador que recibe la valoración. */
+  id_paseador: string;
 
-  // Detalles
-  rating: number; // 1-5 estrellas
+  /** Calificación del servicio en una escala de 1 a 5. */
+  rating: number;
+  /** Comentario adicional sobre la experiencia. */
   comentario?: string;
+  /** Fecha en que se publicó la valoración. */
   fecha: Date;
 }
