@@ -27,7 +27,7 @@ import DefaultCounterCard from 'examples/Cards/CounterCards/DefaultCounterCard';
 
 function Counters() {
   return (
-    <MKBox component="section" py={3}>
+    <MKBox component="section" py={0}>
       <MKTypography variant="h3" textAlign="center" px={6} my={1}>
         Lo que queremos lograr contigo
       </MKTypography>
@@ -38,7 +38,7 @@ function Counters() {
               count={90}
               suffix="+"
               color="success"
-              title="👟 Paseadores Verificados 🐕"
+              title="👟 Paseadores Verificados"
               description="Crear una red de 90+ paseadores certificados en Medellín."
             />
           </Grid>
@@ -48,7 +48,7 @@ function Counters() {
               count={600}
               suffix="+"
               color="warning"
-              title="🐾 Mascotas Felices ❤️"
+              title="🐾 Mascotas Felices"
               description="Conectar a más de 600 familias con cuidadores de confianza."
             />
             <Divider orientation="vertical" sx={{ display: { xs: 'none', md: 'block' }, ml: 0 }} />
@@ -57,8 +57,8 @@ function Counters() {
             <DefaultCounterCard
               count={24}
               suffix="/7"
-              title="📞 Soporte Confiable 🔒"
-              description="Brindar acompañamiento y respuesta en cualquier momento del día."
+              title="📞 Soporte Confiable"
+              description="Ofrecer soporte dedicado 24/7 para todas tus necesidades."
             />
           </Grid>
         </Grid>

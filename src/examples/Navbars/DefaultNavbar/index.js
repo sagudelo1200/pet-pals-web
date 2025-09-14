@@ -488,6 +488,8 @@ function DefaultNavbar({
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
             <MKTypography variant="button" fontWeight="bold" color={light ? 'white' : 'dark'}>
+              {/* Icono de Pets */}
+              <Icon sx={{ fontWeight: 'normal', verticalAlign: 'middle', mr: 0.5 }}>pets</Icon>
               {brand}
             </MKTypography>
           </MKBox>

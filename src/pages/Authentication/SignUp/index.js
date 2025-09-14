@@ -2,7 +2,7 @@ import { useSignUpLogic } from './useSignUpLogic';
 import { Navigate } from 'react-router-dom';
 
 // react-router-dom components
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // @mui material components
 import Switch from '@mui/material/Switch';
@@ -114,7 +114,7 @@ function SignUp() {
             Unirme con Google
           </MKButton>
         </MKBox>
-        <MKBox mt={3} textAlign="center">
+        {/* <MKBox mt={3} textAlign="center">
           <MKTypography variant="button" color="text">
             Ya tiene una cuenta?{' '}
             <MKTypography
@@ -128,7 +128,7 @@ function SignUp() {
               Ingresar
             </MKTypography>
           </MKTypography>
-        </MKBox>
+        </MKBox> */}
       </MKBox>
     </IllustrationLayout>
   );

@@ -14,20 +14,20 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Material Kit 2 PRO React components
-import MKBox from "components/MKBox";
-import MKButton from "components/MKButton";
-import MKTypography from "components/MKTypography";
+import MKBox from 'components/MKBox';
+import MKButton from 'components/MKButton';
+import MKTypography from 'components/MKTypography';
 
-function DefaultBackgroundCard({ image, label = "", title, description, action }) {
+function DefaultBackgroundCard({ image, label = '', title, description, action }) {
   return (
     <Card
       sx={({
@@ -39,8 +39,8 @@ function DefaultBackgroundCard({ image, label = "", title, description, action }
           rgba(black.main, 0.5),
           rgba(black.main, 0.5)
         )}, url(${image})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
         borderRadius: borderRadius.xl,
       })}
     >
@@ -56,8 +56,14 @@ function DefaultBackgroundCard({ image, label = "", title, description, action }
         <MKTypography variant="body2" color="white" opacity={0.8} mb={2}>
           {description}
         </MKTypography>
-        {action.type === "internal" ? (
-          <MKButton component={Link} to={action.route} color="white" size="small" sx={{ my: 2 }}>
+        {action.type === 'internal' ? (
+          <MKButton
+            component={Link}
+            to={action.route}
+            color={action.color || 'white'}
+            size="small"
+            sx={{ my: 2 }}
+          >
             {action.label}
           </MKButton>
         ) : (
@@ -66,7 +72,7 @@ function DefaultBackgroundCard({ image, label = "", title, description, action }
             href={action.route}
             target="_blank"
             rel="noreferrer"
-            color="white"
+            color={action.color || 'white'}
             size="small"
             sx={{ my: 2 }}
           >
@@ -85,9 +91,10 @@ DefaultBackgroundCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.node.isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
+    color: PropTypes.string,
   }).isRequired,
 };
 

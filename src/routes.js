@@ -37,10 +37,10 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from '@mui/material/Icon';
+//import Icon from '@mui/material/Icon';
 
 // Pages
-import Dashboard from './pages/Dashboard';
+//import Dashboard from './pages/Dashboard';
 /* import CoworkingPage from 'layouts/pages/landing-pages/coworking';
 import Rental from 'layouts/pages/landing-pages/rental';
 import AboutUs from 'layouts/pages/company/about-us';
@@ -101,17 +101,8 @@ import Typography from 'layouts/sections/elements/typography'; */
 
 const routes = [
   {
-    name: 'dashboard',
-    icon: <Icon>dashboard</Icon>,
-    route: '/dashboard',
-    component: <Dashboard />,
-  },
-  {
-    name: 'servicios',
-    icon: <Icon>volunteer_activism</Icon>,
-    columns: 3,
-    rowsPerColumn: 2,
-    collapse: [],
+    name: '/',
+    icon: '/',
   },
   /*   {
     name: 'pages',

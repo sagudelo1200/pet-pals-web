@@ -28,7 +28,8 @@ import MKBadge from 'components/MKBadge';
 import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
 import DefaultFooter from 'examples/Footers/DefaultFooter';
 
-// Presentation page sections
+// Landing page sections
+import Beneficios from './sections/Beneficios';
 import Counters from 'pages/landing/sections/Counters';
 
 // Routes
@@ -93,7 +94,7 @@ function Presentation() {
 
             <MKBox mt={6} mx={1}>
               <MKButton component="a" href="/unirme" color="warning" variant="contained">
-                Unirme ahora
+                ¡Unirme ahora!
               </MKButton>
             </MKBox>
             <MKBox mt={6} mx={1}>
@@ -116,6 +117,7 @@ function Presentation() {
         }}
       >
         <Counters />
+        <Beneficios />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
