@@ -40,6 +40,7 @@ import footerRoutes from 'footer.routes';
 import bgImage from 'assets/images/bg-presentation.jpg';
 import ComoFunciona from './sections/ComoFunciona';
 import Cta from './sections/Cta';
+import { Link } from 'react-router-dom';
 
 function Presentation() {
   return (
@@ -95,12 +96,17 @@ function Presentation() {
             </MKTypography>
 
             <MKBox mt={6} mx={1}>
-              <MKButton component="a" href="/unirme" color="warning" variant="contained">
+              <MKButton component={Link} to="/unirme" color="warning" variant="contained">
                 ¡Unirme ahora!
               </MKButton>
             </MKBox>
             <MKBox mt={6} mx={1}>
-              <MKButton component="a" href="/unirme?walker=true" color="success" variant="outlined">
+              <MKButton
+                component={Link}
+                to="/unirme?walker=true"
+                color="success"
+                variant="outlined"
+              >
                 Soy paseador
               </MKButton>
             </MKBox>
