@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/pet-pals-web/static/js/main.d7fb2fdf.js",
+    "static/media/bg2.png": "/pet-pals-web/static/media/bg2.7591c9f9be1de1405570.png",
+    "static/media/bg1.png": "/pet-pals-web/static/media/bg1.09dff2b0523863c3de27.png",
+    "static/media/bg_cta.jpg": "/pet-pals-web/static/media/bg_cta.4991beaf4d6e598aa22b.jpg",
+    "static/media/bg-presentation.jpg": "/pet-pals-web/static/media/bg-presentation.e3b7ea341bfbafd2f7d5.jpg",
+    "static/media/logo-ct-dark.png": "/pet-pals-web/static/media/logo-ct-dark.ea3da577cc733fec3a1d.png",
+    "index.html": "/pet-pals-web/index.html",
+    "main.d7fb2fdf.js.map": "/pet-pals-web/static/js/main.d7fb2fdf.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d7fb2fdf.js"
+  ]
+}
