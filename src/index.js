@@ -14,14 +14,14 @@ Coded by www.creative-tim.com
 */
 
 import * as ReactDOMClient from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from 'App';
 
 const container = document.getElementById('pet-pals');
 const root = ReactDOMClient.createRoot(container);
 
 root.render(
-  <BrowserRouter>
+  <Router basename="/pet-pals-web">
     <App />
-  </BrowserRouter>
+  </Router>
 );
