@@ -101,8 +101,8 @@ import Typography from 'layouts/sections/elements/typography'; */
 
 const routes = [
   {
-    name: '/',
-    icon: '/',
+    name: '',
+    icon: '',
   },
   /*   {
     name: 'pages',

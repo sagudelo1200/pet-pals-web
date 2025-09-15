@@ -58,7 +58,12 @@ function IllustrationLayout({
             borderRadius="lg"
             ml={2}
             mt={2}
-            sx={{ backgroundImage: `url(${illustration})` }}
+            sx={{
+              backgroundImage: `url(${illustration})`,
+              backgroundSize: 'contain', // ajusta la imagen completa
+              backgroundRepeat: 'no-repeat', // evita repeticiones
+              backgroundPosition: 'center', // centra la imagen
+            }}
           />
         </Grid>
         <Grid item xs={11} sm={8} md={5} lg={4} xl={3} sx={{ mx: 'auto' }}>

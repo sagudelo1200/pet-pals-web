@@ -40,6 +40,10 @@ function SimpleInfoCard({ color = 'info', icon, title, description, direction = 
       textAlign={direction}
       p={direction === 'center' ? 2 : 0}
       lineHeight={1}
+      bgColor="#FFFFFF"
+      borderRadius="xl"
+      shadow="xl"
+      height="100%"
     >
       <MKBox
         display="flex"
@@ -53,9 +57,9 @@ function SimpleInfoCard({ color = 'info', icon, title, description, direction = 
         bgColor={color}
         coloredShadow={color}
       >
-        {typeof icon === 'string' ? <Icon fontSize="small">{icon}</Icon> : icon}
+        {typeof icon === 'string' ? <Icon fontSize="large">{icon}</Icon> : icon}
       </MKBox>
-      <MKTypography display="block" variant="5" fontWeight="bold" mt={2.5} mb={1.5}>
+      <MKTypography display="block" variant="h4" fontWeight="bold" mt={2.5} mb={1.5}>
         {title}
       </MKTypography>
       <MKTypography display="block" variant="body2" color="text">

@@ -38,6 +38,8 @@ import footerRoutes from 'footer.routes';
 
 // Images
 import bgImage from 'assets/images/bg-presentation.jpg';
+import ComoFunciona from './sections/ComoFunciona';
+import Cta from './sections/Cta';
 
 function Presentation() {
   return (
@@ -118,6 +120,8 @@ function Presentation() {
       >
         <Counters />
         <Beneficios />
+        <ComoFunciona />
+        <Cta />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

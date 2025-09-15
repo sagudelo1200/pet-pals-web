@@ -17,7 +17,8 @@ import MKButton from 'components/MKButton';
 import IllustrationLayout from 'pages/Authentication/components/IllustrationLayout';
 
 // Image
-import bgImage from 'assets/images/illustrations/signin.jpg';
+import bgImage from 'assets/images/examples/bg1.png';
+import bgPaseador from 'assets/images/examples/bg2.png';
 
 function SignUp() {
   const {
@@ -43,7 +44,7 @@ function SignUp() {
     <IllustrationLayout
       title="Únete a Pet Pals hoy"
       description="Ya seas dueño de mascota o paseador, aquí encontrarás la comunidad perfecta para ti."
-      illustration={bgImage}
+      illustration={isWalker ? bgPaseador : bgImage}
     >
       <MKBox
         component="form"

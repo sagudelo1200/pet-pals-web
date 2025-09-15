@@ -86,7 +86,15 @@ function Beneficios() {
         </Grid>
         <Divider sx={{ my: { xs: 2, sm: 8 }, mx: 12 }} />
         <Grid container spacing={3} alignItems="center">
-          <Grid item xs={12} md={5} sx={{ ml: 'auto' }}>
+          <Grid
+            item
+            xs={12}
+            md={5}
+            sx={{
+              order: { xs: 2, md: 1 },
+              ml: 'auto',
+            }}
+          >
             <ListItem title="Oportunidades constantes">
               Conecta con dueños que buscan paseadores de confianza en tu zona.
             </ListItem>
@@ -97,7 +105,16 @@ function Beneficios() {
               Recibe valoraciones positivas y construye una reputación sólida como paseador.
             </ListItem>
           </Grid>
-          <Grid item xs={12} md={4} sx={{ mr: 'auto', ml: { xs: 0, md: 6 } }}>
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{
+              order: { xs: 1, md: 2 },
+              mr: 'auto',
+              ml: { xs: 0, md: 6 },
+            }}
+          >
             <DefaultBackgroundCard
               image={bgImage2}
               label="para paseadores"
